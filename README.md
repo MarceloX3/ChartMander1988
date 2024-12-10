@@ -54,7 +54,7 @@ Un archivo `.bat` (batch) es un script ejecutable en sistemas Windows que permit
 
 1. **Identificar la ruta del entorno virtual:**
    - Abre la GUI ChartMander1988 acorde a las instrucciones de la Opción A.
-   - Crea una nueva celda y ejecuta el siguiente código:
+   - Dentro del archivo `.ipynb` crea una nueva celda y ejecuta el siguiente código:
      ```python
      import sys
      print(sys.executable)
