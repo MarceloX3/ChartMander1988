@@ -43,7 +43,7 @@ pip install -r requirements.txt
 1. Abre Anaconda Prompt
 2. Activa el entorno: `conda activate ChartMander`
 3. Inicia Jupyter Notebook: `jupyter notebook`
-4. Abre el archivo `.ipynb`
+4. Abre el archivo `S01_GUI_ChartMander1988.ipynb`
 5. Ejecuta
 
 ### OPCIÓN B (Para usuarios con conocimientos técnicos): Ejecución desde un acceso directo
