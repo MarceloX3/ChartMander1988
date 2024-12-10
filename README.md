@@ -1,7 +1,7 @@
 # ChartMander1988
 ChartMander1988 es una herramienta GUI que implementa el ábaco de Mander para calcular la relación de confinamiento del hormigón, basado en el paper de Mander, Priestley y Park (1988). 
 
-![ManderChart](Mander.gif)
+![ManderChart](assets/Mander.gif)
 
 # INSTALACIÓN
 
