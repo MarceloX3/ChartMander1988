@@ -1,5 +1,5 @@
 # ChartMander1988
-ChartMander1988 es una herramienta GUI que implementa el ábaco de Mander para calcular la relación de confinamiento del hormigón, basado en el paper de Mander, Priestley y Park (1988). 
+Herramienta GUI que implementa el ábaco de Mander para calcular el ratio de confinamiento del hormigón, basado en el paper de Mander, Priestley y Park (1988). 
 
 ![ManderChart](assets/Mander.gif)
 
@@ -43,8 +43,8 @@ pip install -r requirements.txt
 1. Abre Anaconda Prompt
 2. Activa el entorno: `conda activate ChartMander`
 3. Inicia Jupyter Notebook: `jupyter notebook`
-4. Abre el archivo `.ipynb`
-5. Ejecuta
+4. Abre el archivo `S01_GUI_ChartMander1988.ipynb`
+5. Ejecuta celda
 
 ### OPCIÓN B (Para usuarios con conocimientos técnicos): Ejecución desde un acceso directo
 
@@ -54,7 +54,7 @@ Un archivo `.bat` (batch) es un script ejecutable en sistemas Windows que permit
 
 1. **Identificar la ruta del entorno virtual:**
    - Abre la GUI ChartMander1988 acorde a las instrucciones de la Opción A.
-   - Crea una nueva celda y ejecuta el siguiente código:
+   - Dentro del archivo `.ipynb` crea una nueva celda y ejecuta el siguiente código:
      ```python
      import sys
      print(sys.executable)
