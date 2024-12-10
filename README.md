@@ -1,5 +1,5 @@
 # ChartMander1988
-Herramienta GUI que implementa el ábaco de Mander para calcular la relación de confinamiento del hormigón, basado en el paper de Mander, Priestley y Park (1988). 
+Herramienta GUI que implementa el ábaco de Mander para calcular el ratio de confinamiento del hormigón, basado en el paper de Mander, Priestley y Park (1988). 
 
 ![ManderChart](assets/Mander.gif)
 
