@@ -44,7 +44,7 @@ pip install -r requirements.txt
 2. Activa el entorno: `conda activate ChartMander`
 3. Inicia Jupyter Notebook: `jupyter notebook`
 4. Abre el archivo `S01_GUI_ChartMander1988.ipynb`
-5. Ejecuta
+5. Ejecuta celda
 
 ### OPCIÓN B (Para usuarios con conocimientos técnicos): Ejecución desde un acceso directo
 
