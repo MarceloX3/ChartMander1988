@@ -22,11 +22,11 @@ git clone https://github.com/MarceloX3/ChartMander1988
 5. Abrir Anaconda Prompt
 6. Crear entorno virtual
 ```bash
-conda create -n ChartMander python=3.11
+conda create -n env_ChartMander1988 python=3.11
 ```
 7. Activar entorno
 ```bash
-conda activate ChartMander
+conda activate env_ChartMander1988
 ```
 8. Navegar a carpeta del proyecto
 ```bash
@@ -41,7 +41,7 @@ pip install -r requirements.txt
 
 ### OPCIÓN A (Para principiantes): Ejecución manual
 1. Abre Anaconda Prompt
-2. Activa el entorno: `conda activate ChartMander`
+2. Activa el entorno: `conda activate env_ChartMander1988`
 3. Inicia Jupyter Notebook: `jupyter notebook`
 4. Abre el archivo `S01_GUI_ChartMander1988.ipynb`
 5. Ejecuta celda
