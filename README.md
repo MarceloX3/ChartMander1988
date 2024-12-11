@@ -42,7 +42,7 @@ conda install --file requirements.txt
 ### OPCIÓN A (Para principiantes): Ejecución manual
 1. Abre Anaconda Prompt
 2. Activa el entorno: `conda activate env_ChartMander1988`
-3. Inicia Jupyter Notebook: `jupyter lab`
+3. Inicia Jupyter Lab: `jupyter lab`
 4. Abre el archivo `S01_GUI_ChartMander1988.ipynb`
 5. Ejecuta celda
 
