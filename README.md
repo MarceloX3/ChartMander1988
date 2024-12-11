@@ -20,17 +20,17 @@ git clone https://github.com/MarceloX3/ChartMander1988
 
 ## PARTE 2: Configuración del Entorno
 5. Abrir Anaconda Prompt
-6. Crear entorno virtual conda
+6. Navegar a carpeta del proyecto
+```bash
+cd ruta/a/tu/proyecto
+```
+7. Crear entorno virtual conda
 ```bash
 conda create --name env_ChartMander1988 --file environment_conda.txt
 ```
-7. Activar entorno
+8. Activar entorno
 ```bash
 conda activate env_ChartMander1988
-```
-8. Navegar a carpeta del proyecto
-```bash
-cd ruta/a/tu/proyecto
 ```
 9. Instalar dependencias pip
 ```bash
