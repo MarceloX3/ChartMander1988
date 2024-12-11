@@ -59,7 +59,7 @@ Un archivo `.bat` (batch) es un script ejecutable en sistemas Windows que permit
      import sys
      print(sys.executable)
      ```
-   - Copia el resultado, que es la ruta del entorno donde se ejecuta Jupyter.
+   - Copia el resultado, que es la ruta del entorno donde se ejecuta Jupyter. (Ejemplo: _C:\Users\USUARIO\anaconda3\envs\env_ChartMander1988_)
 
 2. **Crear el archivo `.bat`:**
    - Abre un editor de texto.
