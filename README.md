@@ -65,18 +65,18 @@ Un archivo `.bat` (batch) es un script ejecutable en sistemas Windows que permit
    - Abre un editor de texto.
    - Copia y pega el siguiente código, reemplazando `RUTA_DEL_ENTORNO` con la ruta obtenida en el paso anterior:
      ```batch
-      @echo off
-      
-      REM Configurar la ruta del entorno virtual
-      set ANACONDAPATH=RUTA_DEL_ENTORNO
-      
-      REM Configurar variables del entorno
-      start %ANACONDAPATH%\python.exe %ANACONDAPATH%\cwp.py %ANACONDAPATH% ^
-      
-      REM Abrir el archivo .ipynb especificado con Jupyter Lab
-      start %ANACONDAPATH%\python.exe -m jupyter lab %1
-      
-      exit
+     @echo off
+     
+     REM Configurar la ruta del entorno virtual
+     set ANACONDAPATH=RUTA_DEL_ENTORNO
+     
+     REM Configurar variables del entorno
+     start %ANACONDAPATH%\python.exe %ANACONDAPATH%\cwp.py %ANACONDAPATH% ^
+     
+     REM Abrir el archivo .ipynb especificado con Jupyter Lab
+     start %ANACONDAPATH%\python.exe -m jupyter lab %1
+     
+     exit
      ```
    - Guarda el archivo con la extensión `.bat` (por ejemplo, `IniciarNotebook.bat`).
 
