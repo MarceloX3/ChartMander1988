@@ -90,5 +90,5 @@ Un archivo `.bat` (batch) es un script ejecutable en sistemas Windows que permit
    - Mueve el acceso directo a un lugar conveniente.
    - Personaliza el icono haciendo clic derecho en el acceso directo, seleccionando "Propiedades" > "Cambiar icono" y eligiendo un archivo `.ico` característico.
 
-Este método proporciona una forma práctica y rápida de iniciar el proyecto sin necesidad de abrir manualmente el entorno o Jupyter Notebook.
+Este método proporciona una forma práctica y rápida de iniciar el proyecto sin necesidad de abrir manualmente el entorno o Jupyter Lab.
 
