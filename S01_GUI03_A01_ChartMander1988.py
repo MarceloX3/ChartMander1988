@@ -36,6 +36,11 @@ from IPython.display import display, Image, Video
 import os
 import shutil
 import sys
+import win32clipboard
+from PIL import Image as PILImage
+import io
+import win32con
+
 sys.path.insert(0, './C_GUI03_ChartMander1988')
 import S01_GUI03_A02_WilliamWarnken5P as ww5p
 
@@ -139,6 +144,43 @@ def show_instructions(change=None):
 The output will show the value of fcc.
 """
     output_windows.value = report
+    
+
+# %%%% [03-02-03] COPY_IMAGE
+# Function copy image to clipboard
+def copy_image_to_clipboard(image_path):
+    # Obtiene la ruta absoluta de la imagen
+    abs_image_path = os.path.abspath(image_path)
+    
+    # Abre la imagen
+    image = PILImage.open(abs_image_path)
+    
+    # Guarda la imagen en un buffer en formato BMP
+    output = io.BytesIO()
+    image.convert("RGB").save(output, 'BMP')
+    data = output.getvalue()[14:]  # Elimina los primeros 14 bytes del encabezado BMP
+    
+    # Abre el portapapeles y limpia su contenido
+    win32clipboard.OpenClipboard()
+    win32clipboard.EmptyClipboard()
+    
+    # Coloca la imagen en el portapapeles
+    win32clipboard.SetClipboardData(win32con.CF_DIB, data)
+    
+    # Cierra el portapapeles
+    win32clipboard.CloseClipboard()
+
+# Function to copy image from GUI
+def copy_image(change=None):
+    # Obtain url from graph_output
+    url_image = 'C_GUI03_ChartMander1988/C_GUI03_ChartMander1988/Test/Mander_1988.png'
+    
+    # Copy image to clipboard
+    if url_image != "":
+        try:
+            copy_image_to_clipboard(url_image)
+        except:
+            pass
 
 
 # %% [04] WIDGETS
@@ -165,10 +207,14 @@ instructions_button_layout = widgets.Layout(width='215px', margin='0 0 0 5px')
 instructions_button = widgets.Button(description='Show Instructions', layout=instructions_button_layout)
 instructions_button.on_click(show_instructions)
 # Button to solve the confinement stress.
-solve_fcc_button_layout = widgets.Layout(width='215px', height= '31px', margin='7px 0 0 5px')
+solve_fcc_button_layout = widgets.Layout(width='102px', height= '27px', margin='2px 0 0 7px')
 solve_fcc_button = widgets.Button(description='Solve', layout=solve_fcc_button_layout)
 solve_fcc_button.disabled = False
 solve_fcc_button.on_click(update_chart)
+# Button to copy image to clipboard
+copy_image_button_layout = widgets.Layout(width='102px', height='27px', margin='2px 0 0 4px')
+copy_image_button = widgets.Button(description='Copy Image', layout=copy_image_button_layout)
+copy_image_button.on_click(copy_image)
 
 
 # %%% [04-06] TEXTAREA
@@ -236,8 +282,9 @@ text3.style.font_size = '14px'
 
 
 # %%% [05-01] INTERFACE
+buttons_line = HBox([solve_fcc_button, copy_image_button])
 strength_inputs_list = [title, instructions_button, text_strength, fco_input, fl2_input, fl3_input, 
-                    fcc_input, solve_fcc_button, text_output_window, output_windows]
+                    fcc_input, buttons_line, text_output_window, output_windows]
 strength_widgets.children = strength_inputs_list
 interface = HBox([strength_widgets, out])
 interface_B = VBox([interface, text3])
